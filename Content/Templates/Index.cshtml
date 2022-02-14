@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@*@{
+    foreach(var item in list)
+    {
+        
+        <table class="table table-bordered">
+        <tr>
+            <td colspan="2" style="background: #DDDDDD">
+                <h4>İLETİŞİM SORUMLUSU</h4>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 160px"><p><strong>Adı / Soyadı</strong></p></td>
+            <td>{ContactPersonFullname}</td>
+        </tr>
+        <tr>
+            <td><p><strong>Görevi</strong></p></td>
+            <td>{ContactPersonTitle}</td>
+        </tr>
+        <tr>
+            <td><p><strong>Telefon</strong></p></td>
+            <td>{ContactPersonPhone}</td>
+        </tr>
+        <tr>
+            <td><p><strong>E-Posta</strong></p></td>
+            <td>{ContactPersonEmail}</td>
+        </tr>
+    </table>
+    }
+}
+*@
