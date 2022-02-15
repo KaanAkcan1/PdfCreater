@@ -17,11 +17,17 @@ namespace PdfCreater.Services
                 createDate = DateTime.Now.ToString("dd MMMM yyyy dddd"),
                 companyName = companyName
             };
-            var filePath = Path.Combine("PdfTemplate.html", "Templates");
+            var filePath = Path.Combine("Content", "Templates","PdfTemplate.html");
             var pdftemplate = FormatTemplate(filePath , pdfContent);
             pdftemplate = TemplateReplace(pdftemplate,additionalData);
 
-            CreatePdfFromHtml(pdftemplate, pdfContent.StartDate.ToString());
+            //PdfDocument doc = new ();
+            //HtmlToPdf.ConvertUrl(pdftemplate, doc);
+            //HtmlToPdf.ConvertUrl(pdftemplate, doc);
+
+            //doc.Save(filePath);
+
+            CreatePdfFromHtml(pdftemplate, "");
         }
 
         public static string FormatTemplate(string templatepath, object obj)
@@ -54,12 +60,12 @@ namespace PdfCreater.Services
 
             if (!Directory.Exists(root)) Directory.CreateDirectory(root);
 
-            var link = "https://inosuit.tim.org.tr/Member/Login";
-            var url = new Uri(link);
-            var client = new WebClient();
-            var html1 = client.DownloadString(url);
+            //var link = "google.com";
+            //var url = new Uri(link);
+            //var client = new WebClient();
+            //var html1 = client.DownloadString(url);
 
-            return HtmlToPdf.ConvertHtml(html1, Path.Combine(root, id + ".pdf"));
+            return HtmlToPdf.ConvertHtml(html, Path.Combine(root, id + ".pdf"));
         }
 
     }

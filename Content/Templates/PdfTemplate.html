@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-    <h2>{Organization} BAŞVURU FORMU</h2>
+    <h2>{ApplicantName} BAŞVURU FORMU</h2>
     <table class="table table-bordered">
         <tr>
             <td colspan="2" style="background: #DDDDDD"><h4>FİRMA BİLGİLERİ</h4></td>
@@ -41,78 +41,11 @@
         </tr>
         <tr>
             <td><p><strong>Firma Sektörü</strong></p></td>
-            <td><p>{CompanySector}</p></td>
+            <td><p>{StartDate}</p></td>
         </tr>
         <tr>
             <td><p><strong>Firma Vergi No</strong></p></td>
-            <td><p>{CompanyTaxNo}</p></td>
+            <td><p>{EndDate}</p></td>
         </tr>
 
-        <tr>
-            <td><p><strong>Firma Adresi</strong></p></td>
-            <td><p>{CompanyAddress} / {CompanyCity}</p></td>
-        </tr>
-        <tr>
-            <td><p><strong>Çalışan Sayısı</strong></p></td>
-            <td><p>{CompanyEmployeeCount}</p></td>
-        </tr>
-        <tr>
-            <td><p><strong>Organizasyon Yaşı</strong></p></td>
-            <td>{CompanyAge}</td>
-        </tr>
     </table>
-    <br /><br />
-    <table class="table table-bordered">
-        <tr>
-            <td colspan="2" style="background: #DDDDDD">
-                <h4>FİRMA YETKİLİSİ</h4>
-                <em>Yetkili kişinin firma adına başvuruda bulunabilmesi için firma adına imza yetkisinin bulunması gerekmektedir</em>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 160px"><p><strong>Adı / Soyadı</strong></p></td>
-            <td>{ExecutiveFullname}</td>
-        </tr>
-        <tr>
-            <td><p><strong>Görevi</strong></p></td>
-            <td>{ExecutiveTitle}</td>
-        </tr>
-        <tr>
-            <td><p><strong>Telefon</strong></p></td>
-            <td>{ExecutivePhone}</td>
-        </tr>
-        <tr>
-            <td><p><strong>E-Posta</strong></p></td>
-            <td>{ExecutiveEmail}</td>
-        </tr>
-    </table>
-    <br /><br />
-    <table class="table table-bordered">
-        <tr>
-            <td colspan="2" style="background: #DDDDDD">
-                <h4>İLETİŞİM SORUMLUSU</h4>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 160px"><p><strong>Adı / Soyadı</strong></p></td>
-            <td>{ContactPersonFullname}</td>
-        </tr>
-        <tr>
-            <td><p><strong>Görevi</strong></p></td>
-            <td>{ContactPersonTitle}</td>
-        </tr>
-        <tr>
-            <td><p><strong>Telefon</strong></p></td>
-            <td>{ContactPersonPhone}</td>
-        </tr>
-        <tr>
-            <td><p><strong>E-Posta</strong></p></td>
-            <td>{ContactPersonEmail}</td>
-        </tr>
-    </table>
-    <p>
-        Yetkili Ad Soyad<br>
-        Kaşe İmza
-    </p>
-</body>
-</html>

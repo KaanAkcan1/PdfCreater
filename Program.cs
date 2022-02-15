@@ -1,3 +1,4 @@
+using PdfCreater.Models;
 using PdfCreater.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +21,14 @@ app.UseHttpsRedirection();
 
 app.MapGet("/weatherforecast", () =>
 {
-    PdfService.CreatePdfFromHtml("", "");
+    var template = new PdfContent()
+    {
+        CompanyName = "Performans",
+        ApplicantName = "KAan",
+        StartDate = DateTime.Now,
+        EndDate = DateTime.Now
+    };
+    PdfService.CreatepdfContentPdf(template);
 })
 .WithName("GetWeatherForecast");
 
